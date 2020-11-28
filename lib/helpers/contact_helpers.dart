@@ -69,7 +69,7 @@ class ContactHelper {
     );
   }
 
-  Future<int> updateContact (Contact contact) async {
+  Future<int> updateContact(Contact contact) async {
     Database dbContact = await db;
     return await dbContact.update(contactTable,
      contact.toMap(),
@@ -110,6 +110,8 @@ class Contact{
   String email;
   String phone;
   String img;
+
+  Contact();
 
   Contact.fromMap(Map map){
     id = map[idColumn];
